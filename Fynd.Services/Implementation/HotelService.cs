@@ -42,7 +42,7 @@ namespace Fynd.Services.Implementation
                              select new HotelRateResponse
                              {
                                  Hotel = h?.Hotel,
-                                 HotelRates = h?.HotelRates
+                                 HotelRates = h?.HotelRates?.Where(x => x.TargetDay == request.ArrivalDate).ToList()
                              }
                             );
 
