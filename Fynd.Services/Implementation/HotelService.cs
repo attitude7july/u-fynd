@@ -13,11 +13,12 @@ namespace Fynd.Services.Implementation
     public class HotelService : IHotelService
     {
         private readonly ILogger<IHotelService> _logger;
-        private static string _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "task3_hotelsrates.json");
-        public HotelService(ILogger<IHotelService> logger)
+        private readonly IFileService _fileService;
+
+        public HotelService(ILogger<IHotelService> logger, IFileService fileService)
         {
             _logger = logger;
-
+            _fileService = fileService;
         }
 
         public Task<HotelRateResponse> GetFilteredInformation(GetRequestModel request)
@@ -29,7 +30,7 @@ namespace Fynd.Services.Implementation
                     throw new ArgumentException("Input fields cannot be null.");
                 }
 
-                var hotelLists = JsonConvert.DeserializeObject<List<HotelRateResponse>>(File.ReadAllText(_filePath),
+                var hotelLists = JsonConvert.DeserializeObject<List<HotelRateResponse>>(File.ReadAllText(_fileService.GetFilePath()),
                     new JsonSerializerSettings
                     {
                         MissingMemberHandling = MissingMemberHandling.Ignore,

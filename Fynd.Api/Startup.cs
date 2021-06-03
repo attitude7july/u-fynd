@@ -48,6 +48,7 @@ namespace Fynd.Api
             });
 
             //RegisterServices
+            services.AddScoped<IFileService, FileService>();
             services.AddScoped<IHotelService, HotelService>();
         }
 
