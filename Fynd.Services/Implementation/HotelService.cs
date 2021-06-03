@@ -41,7 +41,7 @@ namespace Fynd.Services.Implementation
                              select new HotelRateResponse
                              {
                                  Hotel = h?.Hotel,
-                                 HotelRates = h?.HotelRates?.Where(x => x.TargetDay.Equals(request.ArrivalDate)).ToList()
+                                 HotelRates = h?.HotelRates?.Where(x => x.TargetDay.ToString("yyyy-MM-dd") == request.ArrivalDate.ToString("yyyy-MM-dd")).ToList()
                              }
                             );
 
