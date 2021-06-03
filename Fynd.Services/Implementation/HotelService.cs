@@ -26,7 +26,6 @@ namespace Fynd.Services.Implementation
             {
                 if (request == null)
                 {
-
                     throw new ArgumentException("Input fields cannot be null.");
                 }
 
