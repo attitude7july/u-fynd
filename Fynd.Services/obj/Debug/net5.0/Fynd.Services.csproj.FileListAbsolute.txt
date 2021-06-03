@@ -9,3 +9,4 @@ G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.csproj.Co
 G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.dll
 G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\ref\Fynd.Services.dll
 G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.pdb
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.csproj.AssemblyReference.cache

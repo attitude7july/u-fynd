@@ -30,7 +30,12 @@ namespace Fynd.Services.Implementation
                     throw new ArgumentException("Input fields cannot be null.");
                 }
 
-                var hotelLists = JsonConvert.DeserializeObject<List<HotelRateResponse>>(File.ReadAllText(_filePath));
+                var hotelLists = JsonConvert.DeserializeObject<List<HotelRateResponse>>(File.ReadAllText(_filePath),
+                    new JsonSerializerSettings
+                    {
+                        MissingMemberHandling = MissingMemberHandling.Ignore,
+                        DateFormatString = "yyyy-MM-dd"
+                    });
 
                 var hotel = (from h in hotelLists
                              where h.Hotel.HotelId == request.HotelId
