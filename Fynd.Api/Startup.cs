@@ -1,3 +1,5 @@
+using Fynd.Services.Contract;
+using Fynd.Services.Implementation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -44,6 +46,9 @@ namespace Fynd.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fynd.Api", Version = "v1" });
             });
+
+            //RegisterServices
+            services.AddScoped<IHotelService, HotelService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +71,7 @@ namespace Fynd.Api
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fynd.Services", "Fynd.Services\Fynd.Services.csproj", "{AB0ADEDC-E289-477B-A89B-33C45F66294F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fynd.Api", "Fynd.Api\Fynd.Api.csproj", "{8C021DA4-12E9-494D-9387-C2678D9F323E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fynd.Services.Test", "Fynd.Services.Test\Fynd.Services.Test.csproj", "{28D36E60-3E6A-4AF6-AE2A-215170C700D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{12EB6E8F-9B67-4652-BBD7-20F5F6FFA827}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,24 +12,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{12EB6E
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fynd.Services", "Fynd.Services\Fynd.Services.csproj", "{938FDDF2-CAB8-4EA4-96EA-5137431C5DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fynd.Services.Test", "Fynd.Services.Test\Fynd.Services.Test.csproj", "{31AF38F7-EF20-435C-86D6-56FC67B1B383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AB0ADEDC-E289-477B-A89B-33C45F66294F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB0ADEDC-E289-477B-A89B-33C45F66294F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB0ADEDC-E289-477B-A89B-33C45F66294F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB0ADEDC-E289-477B-A89B-33C45F66294F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C021DA4-12E9-494D-9387-C2678D9F323E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C021DA4-12E9-494D-9387-C2678D9F323E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C021DA4-12E9-494D-9387-C2678D9F323E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C021DA4-12E9-494D-9387-C2678D9F323E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28D36E60-3E6A-4AF6-AE2A-215170C700D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28D36E60-3E6A-4AF6-AE2A-215170C700D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28D36E60-3E6A-4AF6-AE2A-215170C700D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28D36E60-3E6A-4AF6-AE2A-215170C700D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938FDDF2-CAB8-4EA4-96EA-5137431C5DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938FDDF2-CAB8-4EA4-96EA-5137431C5DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938FDDF2-CAB8-4EA4-96EA-5137431C5DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938FDDF2-CAB8-4EA4-96EA-5137431C5DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AF38F7-EF20-435C-86D6-56FC67B1B383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AF38F7-EF20-435C-86D6-56FC67B1B383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AF38F7-EF20-435C-86D6-56FC67B1B383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AF38F7-EF20-435C-86D6-56FC67B1B383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,11 @@
+G:\asmatechnocrats\u-fynd\Fynd.Services\bin\Debug\net5.0\Fynd.Services.deps.json
+G:\asmatechnocrats\u-fynd\Fynd.Services\bin\Debug\net5.0\Fynd.Services.dll
+G:\asmatechnocrats\u-fynd\Fynd.Services\bin\Debug\net5.0\ref\Fynd.Services.dll
+G:\asmatechnocrats\u-fynd\Fynd.Services\bin\Debug\net5.0\Fynd.Services.pdb
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.GeneratedMSBuildEditorConfig.editorconfig
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.AssemblyInfoInputs.cache
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.AssemblyInfo.cs
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.csproj.CoreCompileInputs.cache
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.dll
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\ref\Fynd.Services.dll
+G:\asmatechnocrats\u-fynd\Fynd.Services\obj\Debug\net5.0\Fynd.Services.pdb

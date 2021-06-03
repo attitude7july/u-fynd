@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "3ypCtDJZLgYWY9CF1rSgvhBzh4JufCifbSyEpq4osVRkKGZyLIevQxwyvtX9n8nxGM+uq2xpOGhoeI1Zy9wFzQ==",
+  "dgSpecHash": "Jk6KZ4ugmUDzjP9Cfq90NWmawkQFddxyuVpPTfngtA4d7f/YuWRrgqaNqW9kXlPQh4hAPV5ExUTLN2xHQBRTaQ==",
   "success": true,
   "projectFilePath": "G:\\asmatechnocrats\\u-fynd\\Fynd.Services\\Fynd.Services.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Hussain\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.6\\microsoft.aspnetcore.http.features.5.0.6.nupkg.sha512",
+    "C:\\Users\\Hussain\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Hussain\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Hussain\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Hussain\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
