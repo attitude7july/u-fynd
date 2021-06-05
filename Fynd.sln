@@ -10,11 +10,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{12EB6E
 		.dockerignore = .dockerignore
 		.circleci\config.yml = .circleci\config.yml
 		Dockerfile = Dockerfile
+		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fynd.Services", "Fynd.Services\Fynd.Services.csproj", "{938FDDF2-CAB8-4EA4-96EA-5137431C5DFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fynd.Services", "Fynd.Services\Fynd.Services.csproj", "{938FDDF2-CAB8-4EA4-96EA-5137431C5DFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fynd.Services.Test", "Fynd.Services.Test\Fynd.Services.Test.csproj", "{31AF38F7-EF20-435C-86D6-56FC67B1B383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fynd.Services.Test", "Fynd.Services.Test\Fynd.Services.Test.csproj", "{31AF38F7-EF20-435C-86D6-56FC67B1B383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
