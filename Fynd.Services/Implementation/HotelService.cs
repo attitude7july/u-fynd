@@ -14,7 +14,7 @@ namespace Fynd.Services.Implementation
     {
         private readonly ILogger<IHotelService> _logger;
         private readonly IFileService _fileService;
-        public HotelService(ILogger<IHotelService> logger, IFileService fileService, IEmailService emailService)
+        public HotelService(ILogger<IHotelService> logger, IFileService fileService)
         {
             _logger = logger;
             _fileService = fileService;
