@@ -1,5 +1,7 @@
 using Fynd.Services.Contract;
 using Fynd.Services.Implementation;
+using Hangfire;
+using Hangfire.MemoryStorage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -32,6 +35,14 @@ namespace Fynd.Api
            .AllowAnyMethod()
            ));
 
+            services.AddHangfire(config =>
+            config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+            .UseSimpleAssemblyNameTypeSerializer()
+            .UseDefaultTypeSerializer()
+            .UseMemoryStorage());
+            services.AddHangfireServer();
+
+
             services.AddControllers()
             .AddJsonOptions(ops =>
             {
@@ -44,12 +55,14 @@ namespace Fynd.Api
 
             services.AddSwaggerGen(c =>
             {
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fynd.Api", Version = "v1" });
             });
 
             //RegisterServices
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IHotelService, HotelService>();
+            services.AddScoped<IEmailService, EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +76,7 @@ namespace Fynd.Api
             }
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
+            app.UseHangfireDashboard("/mydashboard");
 
             app.UseRouting();
 

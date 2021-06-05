@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Http;
 
 namespace Fynd.Services.Models
 {
@@ -12,6 +11,4 @@ namespace Fynd.Services.Models
         [Required]
         public DateTime ArrivalDate { get; set; }
     }
-
-
 }

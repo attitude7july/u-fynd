@@ -2,6 +2,9 @@
 {
     public interface IFileService
     {
-        string GetFilePath();
+        string ReadJsonFile(string fileName);
+        T GetObject<T>(string jsonString);
+        string Task3FileName { get; }
+        string Task2FileName { get; }
     }
 }

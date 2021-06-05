@@ -45,26 +45,54 @@ namespace Fynd.Services.Test.Services
         public void ShouldThrowExceptionException()
         {
             var fileService = new Mock<IFileService>();
-            fileService.Setup(x => x.GetFilePath()).Returns("somestupiddata:)");
+
             var service = new HotelService(_logger.Object, fileService.Object);
 
-            Assert.ThrowsAsync<ArgumentException>(() => service.GetFilteredInformation(new GetRequestModel
-            {
-                HotelId = 7294,
-                ArrivalDate = new DateTime(2016, 03, 15)
-            }));
+            Assert.ThrowsAsync<ArgumentException>(() => service.GetFilteredInformation(new GetRequestModel()));
         }
 
         [Fact]
-        public void ShouldGetFolderPath()
+        public void ShouldGetJsonData()
         {
             var service = new FileService();
 
-            var request = service.GetFilePath();
+            var request = service.ReadJsonFile("task3_hotelsrates.json");
 
-            Assert.Equal(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "task3_hotelsrates.json"), request);
+            Assert.NotNull(request);
+        }
+
+        [Fact]
+        public void ShouldThrowException()
+        {
+            var service = new FileService();
+
+            Assert.Throws<FileNotFoundException>(() => service.ReadJsonFile("task3_hotelsrates1.json"));
+        }
+
+        [Fact]
+        public async void ShouldGetExcelReport()
+        {
+            var service = new HotelService(_logger.Object, new FileService());
+
+            var response = await service.GetExcelReport();
+
+            Assert.NotNull(response);
+
+            Assert.Equal(typeof(byte[]), response.GetType());
+        }
+
+
+        [Fact]
+        public void ShouldThrowExceptionGetExcelReport()
+        {
+            var fileService = new Mock<IFileService>();
+
+            var service = new HotelService(_logger.Object, fileService.Object);
+
+            Assert.ThrowsAsync<ArgumentException>(() => service.GetExcelReport());
         }
     }
+
     public class CalculatorTestData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()

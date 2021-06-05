@@ -7,5 +7,7 @@ namespace Fynd.Services.Contract
     {
         Task<HotelRateResponse> GetFilteredInformation(GetRequestModel request);
 
+        Task<byte[]> GetExcelReport();
+
     }
 }
