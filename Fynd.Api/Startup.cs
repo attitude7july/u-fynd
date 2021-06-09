@@ -85,7 +85,7 @@ namespace Fynd.Api
             }
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
-            app.UseHangfireDashboard("/mydashboard");
+            app.UseHangfireDashboard("/mydashboard", new DashboardOptions { AppPath = Environment.GetEnvironmentVariable("applicationUrl") });
 
             app.UseRouting();
 
