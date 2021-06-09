@@ -1,6 +1,7 @@
 using Fynd.Services.Contract;
 using Fynd.Services.Implementation;
 using Hangfire;
+using Hangfire.Dashboard;
 using Hangfire.MemoryStorage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -85,7 +86,10 @@ namespace Fynd.Api
             }
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
-            app.UseHangfireDashboard("/mydashboard", new DashboardOptions { AppPath = Environment.GetEnvironmentVariable("applicationUrl") });
+            app.UseHangfireDashboard("/hangfire", new DashboardOptions
+            {
+                IsReadOnlyFunc = (DashboardContext context) => true
+            });
 
             app.UseRouting();
 

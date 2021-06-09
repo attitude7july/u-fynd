@@ -7,5 +7,5 @@
 ###  You will see two endpoints
 ###  One is for Task2
 ###  One endpoint is for Task3
-###  USE URL http://localhost:5000/mydashboard
+###  USE URL http://localhost:5000/hangfire
 ###  THIS DASHBOARD WILL SHOW JOB FOR EMAIL ONCE YOU RUN ENDPOINT FOR TASK2
