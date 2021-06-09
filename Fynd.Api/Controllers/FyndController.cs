@@ -20,7 +20,7 @@ namespace Fynd.Api.Controllers
             _hotelService = hotelService;
             _emailService = emailService;
         }
-        [Route("GetFilteredListForTask3")]
+        [Route(nameof(GetFilteredListForTask3))]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(HotelRateResponse))]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
@@ -41,7 +41,7 @@ namespace Fynd.Api.Controllers
 
             return Ok(hotel);
         }
-        [Route("GetExcelReportTask2")]
+        [Route(nameof(GetExcelReportTask2))]
         [HttpGet]
         public async Task<IActionResult> GetExcelReportTask2()
         {
@@ -52,7 +52,7 @@ namespace Fynd.Api.Controllers
                 return NotFound();
             }
 
-            BackgroundJob.Schedule(() => _emailService.SendEmail(content), TimeSpan.FromMinutes(10));
+            BackgroundJob.Schedule(() => _emailService.SendEmail(content), TimeSpan.FromMinutes(1));
 
             return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "excelReport.xlsx");
         }

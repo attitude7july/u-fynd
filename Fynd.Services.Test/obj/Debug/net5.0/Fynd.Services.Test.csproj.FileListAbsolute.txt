@@ -118,3 +118,5 @@ G:\asmatechnocrats\u-fynd\Fynd.Services.Test\bin\Debug\net5.0\runtimes\unix\lib\
 G:\asmatechnocrats\u-fynd\Fynd.Services.Test\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
 G:\asmatechnocrats\u-fynd\Fynd.Services.Test\bin\Debug\net5.0\Data\task2_ hotelrates.json
 G:\asmatechnocrats\u-fynd\Fynd.Services.Test\bin\Debug\net5.0\Data\empty.json
+G:\asmatechnocrats\u-fynd\Fynd.Services.Test\bin\Debug\net5.0\SendGrid.dll
+G:\asmatechnocrats\u-fynd\Fynd.Services.Test\bin\Debug\net5.0\StarkbankEcdsa.dll

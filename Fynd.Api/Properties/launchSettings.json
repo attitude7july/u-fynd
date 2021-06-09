@@ -23,10 +23,14 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CLIENT_URL": "http://localhost:3000"
+        "CLIENT_URL": "http://localhost:3000",
+        "API_KEY": "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",
+        "FROM_ADDRESS": "shahidkochak@gmail.com",
+        "TO_ADDRESS": "shahidkochak@gmail.com",
+        "SUBJECT": "u:fynd document report"
       },
       "dotnetRunMessages": "true",
-      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+      "applicationUrl": "http://localhost:5000"
     },
     "Docker": {
       "commandName": "Docker",

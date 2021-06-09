@@ -62,6 +62,15 @@ namespace Fynd.Api
             //RegisterServices
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IHotelService, HotelService>();
+            services.AddSingleton<IEmailConfig>(
+                new EmailConfig
+                {
+                    ToAddress = Environment.GetEnvironmentVariable("TO_ADDRESS"),
+                    FromAddress = Environment.GetEnvironmentVariable("FROM_ADDRESS"),
+                    ApiKey = Environment.GetEnvironmentVariable("API_KEY"),
+                    Subject = Environment.GetEnvironmentVariable("SUBJECT"),
+                }
+            );
             services.AddScoped<IEmailService, EmailService>();
         }
 
