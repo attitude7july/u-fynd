@@ -20,9 +20,9 @@ namespace Fynd.Services.Test.Services
         {
             var eService = new EmailService(_logger.Object, new EmailConfig
             {
-                ToAddress = "borakobama@gmail.com",
-                FromAddress = "shahidkochak@gmail.com",
-                ApiKey = "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",
+                ToAddress = "junkaddress@gmail.com",
+                FromAddress = "junkaddress@gmail.com",
+                ApiKey = "SG.rbSTXktFSrqUsHvyrh8rVg",
                 Subject = "test email"
             });
             var service = new HotelService((new Mock<ILogger<IHotelService>>()).Object, new FileService());
@@ -33,7 +33,7 @@ namespace Fynd.Services.Test.Services
 
             var response = await eService.SendEmail(docResponse);
 
-            Assert.True(response.IsSuccessStatusCode);
+            Assert.False(response.IsSuccessStatusCode);
         }
 
         [Fact]
